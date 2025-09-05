@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Yekan", sans-serif;
+
+  --color-primary: #ff510c;
+  --color-lightGray: #fafafa;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar from IE and Firefox and Edge */
+.no-scrollbar {
+  -ms-overflow-style: none; /* Edge and IE */
+  scrollbar-width: none; /* Firefox */
+}
