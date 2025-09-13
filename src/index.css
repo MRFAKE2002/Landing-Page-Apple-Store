@@ -139,3 +139,55 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* اندازه کلی Swiper: حداکثر 1200px به همراه نمایشPeek از دو طرف */
+.swiper-container-banner {
+  width: min(1200px, 100%);
+  height: 386px;
+  margin: 0 auto;
+  /* اختیاری برای داشتن فضای آرامتر حول اسلایدها */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* هر اسلاید */
+.swiper-container-banner .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* محتوای داخل اسلاید (تصویر) */
+.swiper-container-banner .slide-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-container-banner .slide-inner img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  /* اگر می‌خواهی دقیقاً عرض 1200px در large screens رو حفظ کنی، اینجا با max-width کار می‌کنه */
+  max-width: 100%;
+}
+
+/* تیرگی روی اسلایدهای غیر فعال (به‌جز فعال) */
+.swiper-container-banner .swiper-slide:not(.swiper-slide-active) {
+  filter: brightness(0.6);
+  transform: scale(0.95);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+.swiper-container-banner .swiper-slide-active {
+  filter: brightness(1);
+  transform: scale(1);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* Optional: تاریک‌تر کردن لبه‌ها تا تأکید روی اسلاید فعال */
+.swiper-container-banner .swiper-slide {
+  /* ایجاد shading به طرفین اسلایدها (اختیاری) */
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
