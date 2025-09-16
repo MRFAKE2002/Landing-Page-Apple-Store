@@ -66,7 +66,7 @@ export default function BannerSidebar() {
               scale: 0.85,
             },
           }}
-          slidesPerView={1.25} // یک اسلاید کامل + بخشی از اسلاید بعدی
+          slidesPerView={1.5} // یک اسلاید کامل + بخشی از اسلاید بعدی
           centeredSlides={true}
           loop={true}
           spaceBetween={24}
@@ -76,9 +76,9 @@ export default function BannerSidebar() {
             disableOnInteraction: false,
           }}
           breakpoints={{
-            320: { slidesPerView: 1.05, spaceBetween: 8 },
+            320: { slidesPerView: 1.4, spaceBetween: 8 },
             640: { slidesPerView: 1.15, spaceBetween: 12 },
-            1024: { slidesPerView: 1.25, spaceBetween: 20 },
+            1024: { slidesPerView: 1.4, spaceBetween: 24 },
             1280: { slidesPerView: 1.4, spaceBetween: 24 }, // دسکتاپ بزرگ‌تر: مقدار بیشتر برای دیدن اسلایدهای اطراف
           }}
           className="mySwiper"
@@ -88,22 +88,19 @@ export default function BannerSidebar() {
               <div
                 className="slide-inner rounded-2xl overflow-hidden"
                 style={{
-                  width: 1200,
-                  height: 386,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  background:
-                    "linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.02))",
+                  // background:
+                    // "linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.02))",
                   transformStyle: "preserve-3d",
                 }}
               >
                 <img
                   src={slide.src}
                   alt={slide.alt}
+                  className="w-86 lg:w-7xl h-32 lg:h-96"
                   style={{
-                    width: "1200px",
-                    height: "386px",
                     objectFit: "contain",
                     pointerEvents: "none",
                   }}
